@@ -4,7 +4,6 @@ class SearchBar extends React.Component{
     state= {
         query:''
     }
-
     handleChange(event){
         const {name, value} = event.target;
         this.setState({[name] : value})
@@ -14,7 +13,7 @@ class SearchBar extends React.Component{
         return(
             <div>
             <label>Search</label>
-                <input type='search' name='query' value={this.state.query} onChange={(e) => this.handleChange(e)}/>
+                <input type='search' name='query' placeholder='Search...' value={this.props.query} onChange={(e) => this.handleChange(e)}/>
             </div>
         )
     }
