@@ -5,7 +5,7 @@ class SearchBar extends React.Component{
         return(
             <div>
             <label>Search</label>
-                <input type='search' name='query' value={this.props.query} onChange={(e) => this.handleChange(e)}/>
+                <input type='search' name='query' value={this.props.query} onChange={this.props.handleChange}/>
             </div>
         )
     }
