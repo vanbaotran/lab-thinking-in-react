@@ -8,12 +8,11 @@ class SearchBar extends React.Component{
         const {name, value} = event.target;
         this.setState({[name] : value})
     }
-
     render(){
         return(
             <div>
             <label>Search</label>
-                <input type='search' name='query' placeholder='Search...' value={this.props.query} onChange={(e) => this.handleChange(e)}/>
+                <input type='search' name='query' placeholder='Search...' value={this.props.query} onChange={(e) => this.handleChange(e)} onClick={this.props.typing}/>
             </div>
         )
     }
