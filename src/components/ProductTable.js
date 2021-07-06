@@ -13,7 +13,7 @@ class ProductTable extends React.Component {
                 </thead>
                 <tbody>
                     {this.props.data.map((el)=>{
-                        return <ProductRow name={el.name} price={el.price}/>
+                        return <ProductRow name={el.name} price={el.price} stocked={el.stocked}/>
                     })}
                 </tbody>
             </table>

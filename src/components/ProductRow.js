@@ -1,17 +1,23 @@
 import React from 'react'
 
-class ProductRow extends React.Component{
-    render(){
-        return(
-            <tr>
-                <td>
-                 {this.props.name}       
-                </td>
-                <td>
-                 {this.props.price}
-                </td>
-            </tr>
-        )
+function ProductRow(props) {
+    let divStyle = {
+        color: 'red'
     }
+    if (props.stocked){
+        divStyle.color='black'
+    } else {
+        divStyle.color='red'
+    }
+    return(
+        <tr style={divStyle}>
+            <td>
+                {props.name}       
+            </td>
+            <td>
+                {props.price}
+            </td>
+        </tr>
+    )
 }
 export default ProductRow
